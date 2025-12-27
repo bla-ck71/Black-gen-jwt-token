@@ -27,17 +27,17 @@ def TOKEN_MAKER(OLD_ACCESS_TOKEN, NEW_ACCESS_TOKEN, OLD_OPEN_ID, NEW_OPEN_ID, ui
     Final_Payload = bytes.fromhex(d)
     headers = {
         'X-Unity-Version': '2018.4.11f1',
-        'ReleaseVersion': 'OB50',
+        'ReleaseVersion': 'OB51',
         'Content-Type': 'application/x-www-form-urlencoded',
         'X-GA': 'v1 1',
         'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInN2ciI6IjEiLCJ0eXAiOiJKV1QifQ.eyJhY2NvdW50X2lkIjo5MjgwODkyMDE4LCJuaWNrbmFtZSI6IkJZVEV2R3QwIiwibm90aV9yZWdpb24iOiJNRSIsImxvY2tfcmVnaW9uIjoiTUUiLCJleHRlcm5hbF9pZCI6ImYzNGQyMjg0ZWJkYmFkNTkzNWJjOGI1NTZjMjY0ZmMwIiwiZXh0ZXJuYWxfdHlwZSI6NCwicGxhdF9pZCI6MCwiY2xpZW50X3ZlcnNpb24iOiIxLjEwNS41IiwiZW11bGF0b3Jfc2NvcmUiOjAsImlzX2VtdWxhdG9yIjpmYWxzZSwiY291bnRyeV9jb2RlIjoiRUciLCJleHRlcm5hbF91aWQiOjMyMzQ1NDE1OTEsInJlZ19hdmF0YXIiOjEwMjAwMDAwNSwic291cmNlIjoyLCJsb2NrX3JlZ2lvbl90aW1lIjoxNzE0NjYyMzcyLCJjbGllbnRfdHlwZSI6MSwic2lnbmF0dXJlX21kNSI6IiIsInVzaW5nX3ZlcnNpb24iOjEsInJlbGVhc2VfY2hhbm5lbCI6ImlvcyIsInJlbGVhc2VfdmVyc2lvbiI6Ik9CNDUiLCJleHAiOjE3MjIwNTkxMjF9.yYQZX0GeBMeBtMLhyCjSV0Q3e0jAqhnMZd3XOs6Ldk4',
         'Content-Length': '928',
         'User-Agent': 'Dalvik/2.1.0 (Linux; U; Android 7.1.2; ASUS_Z01QD Build/QKQ1.190825.002)',
-        'Host': 'loginbp.common.ggbluefox.com',
+        'Host': 'loginbp.ggwhitehawk.com',
         'Connection': 'Keep-Alive',
         'Accept-Encoding': 'gzip'
     }
-    URL = "https://loginbp.common.ggbluefox.com/MajorLogin"
+    URL = "https://loginbp.ggwhitehawk.com/MajorLogin"
     RESPONSE = requests.post(URL, headers=headers, data=Final_Payload, verify=False)
     if RESPONSE.status_code == 200:
         if len(RESPONSE.text) < 10:
